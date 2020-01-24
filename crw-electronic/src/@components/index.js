@@ -1,3 +1,3 @@
-export * from './HomePage/HomePage.js'
-
+export * from './MenuItem'
+export * from './Directory'
 
