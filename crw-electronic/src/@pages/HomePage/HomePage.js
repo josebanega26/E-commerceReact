@@ -8,7 +8,6 @@ const HomePage = (props) => {
     return (
         <div className='homepage'>
             <div class="directory-Menu">
-                HomePage
                 <Directory />
             </div>
         </div>

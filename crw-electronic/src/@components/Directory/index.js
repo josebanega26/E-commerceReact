@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { sections as Mock } from './mockData'
 import { MenuItem } from '../index'
+import './style.scss'
 const Directory = (props) => {
 
     const [sections, setSections] = useState([])
@@ -9,8 +10,12 @@ const Directory = (props) => {
         setTimeout(() => { setSections(Mock) }, 1000)
     }, [])
     return (
-        <div>
-            {sections.map((id, imgUrl, title) => (<MenuItem id={id} imgUrl={imgUrl} />))}
+        <div className='directory-menu'>
+            {sections.map(({ title, id, imgUrl, ...rest }, key) => (<MenuItem
+                title={title}
+                id={id}
+                imgUrl={imgUrl}
+                {...rest} />))}
         </div>
     )
 }
