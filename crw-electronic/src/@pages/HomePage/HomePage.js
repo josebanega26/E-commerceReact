@@ -7,7 +7,7 @@ import { Directory } from '../../@components'
 const HomePage = (props) => {
     return (
         <div className='homepage'>
-            <div class="directory-Menu">
+            <div className="directory-Menu">
                 <Directory />
             </div>
         </div>

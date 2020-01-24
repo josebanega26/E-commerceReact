@@ -1,10 +1,11 @@
 import React from 'react'
 import './style.scss'
 
-const MenuItem = ({ title, id, imgUrl }) => {
+const MenuItem = ({ title, id, imgUrl, size }) => {
+    console.log('size', size)
     return (
         <div key={id}
-            className='menu-item'
+            className={`${size} menu-item`}
             style={{
                 backgroundImage: `url(${imgUrl})`
             }}>

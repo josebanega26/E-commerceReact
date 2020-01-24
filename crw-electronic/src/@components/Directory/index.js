@@ -11,10 +11,12 @@ const Directory = (props) => {
     }, [])
     return (
         <div className='directory-menu'>
-            {sections.map(({ title, id, imgUrl, ...rest }, key) => (<MenuItem
+            {sections.map(({ title, id, imgUrl, size, ...rest }) => (<MenuItem
                 title={title}
                 id={id}
                 imgUrl={imgUrl}
+                size={size}
+                key={id}
                 {...rest} />))}
         </div>
     )
