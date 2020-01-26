@@ -9,10 +9,8 @@ const ShopPage = (props) => {
             setShopData(mockData)
         }, 3000)
     }, [])
-    console.log('shopData', shopData)
     return (
         <div>
-            <h1>SHOP</h1>
             {shopData.map((items, id) => (<ColletionPreview key={id} {...items} />))}
         </div>
     )

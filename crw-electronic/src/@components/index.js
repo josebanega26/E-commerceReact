@@ -1,4 +1,4 @@
 export * from './MenuItem'
 export * from './Directory'
-export * from './ColletionPreview'
-
+export * from './CollectionPreview'
+export * from './CollectionItem'
