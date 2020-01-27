@@ -36,9 +36,9 @@ const SignIn = (props) => {
                 />
                 <div className="buttons">
                     <CustomButton type='submit' onClick={handleSubmit} >
-                        Sing In</CustomButton>
+                        Sign In</CustomButton>
                     <CustomButton type='submit' className='secondary' onClick={handleSubmit} >
-                        Sing In with Google</CustomButton>
+                        Sign In with Google</CustomButton>
                 </div>
             </form>
 
