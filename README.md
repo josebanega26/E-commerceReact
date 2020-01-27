@@ -40,5 +40,9 @@ for example:
     
  ### Section 5 - Router & Routing
 
+ Instead of Using React Router, i'm using his alternative Reach Router.
+
+ ### Sections 6 -
+
 #### Link of reference 
 [1] https://www.codecademy.com/articles/react-virtual-dom

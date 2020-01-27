@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { HomePage, ShopPage } from './@pages'
+import { HomePage, ShopPage, SignInAndUp } from './@pages'
 import { Header, Footer } from './@components'
 import { Router } from "@reach/router"
 
@@ -13,6 +13,7 @@ function App() {
         <Router>
           <HomePage path='/'></HomePage>
           <ShopPage path='/shop'></ShopPage>
+          <SignInAndUp path='signIn'></SignInAndUp>
         </Router>
       </div>
       <Footer></Footer>
