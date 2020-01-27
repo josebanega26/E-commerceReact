@@ -42,7 +42,22 @@ for example:
 
  Instead of Using React Router, i'm using his alternative Reach Router.
 
- ### Sections 6 -
+ ### Sections 6 - Master Components
 
+    For the Sign In Component, i used the idea of this article to create a custom component,that leave me work with so many inputs as i want for differents forms
+    [2]`
+    import { useState } from 'react'
+
+    export const useInputChange = () => {
+        const [input, setInput] = useState({})
+
+        const handleInputChange = (e) => setInput({
+            ...input,
+            [e.currentTarget.name]: e.currentTarget.value
+        })
+
+        return [input, handleInputChange]
+    }`
 #### Link of reference 
 [1] https://www.codecademy.com/articles/react-virtual-dom
+[2] https://dev.to/stanleyjovel/simplify-controlled-components-with-react-hooks-23nn

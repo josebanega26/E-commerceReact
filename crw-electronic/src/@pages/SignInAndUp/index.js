@@ -1,9 +1,9 @@
 import React from 'react'
-
+import { SignIn } from '../../@components'
 const SignInAndUp = (props) => {
     return (
         <div>
-            SignInAndUp
+            <SignIn></SignIn>
         </div>
     )
 }
