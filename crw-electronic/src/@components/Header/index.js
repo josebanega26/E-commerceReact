@@ -3,8 +3,9 @@ import { Link } from '@reach/router'
 import './style.scss'
 import { ReactComponent as Logo } from '../../@assets/logo.svg'
 import { auth } from '../../firebase/firebase.util'
-const Header = ({ currentUser }) => {
-    console.log('currentUser', currentUser)
+import { connect } from 'react-redux'
+
+const _Header = ({ currentUser }) => {
     const { displayName } = currentUser ? currentUser : { displayName: '' }
     const signOut = () => {
         auth.signOut()
@@ -14,7 +15,7 @@ const Header = ({ currentUser }) => {
             <Link to='/' className="logo-container option">
                 <Logo className='logo'></Logo>
                 {
-                    displayName.length > 0
+                    displayName
                         ? <div className='display-name option'> {displayName}</div>
                         : null
                 }
@@ -32,10 +33,17 @@ const Header = ({ currentUser }) => {
     )
 }
 
-Header.defaultProps = {
+_Header.defaultProps = {
     currentUser: {
         displayName: ''
     }
 }
+const mapStateToProps = (state) => ({
+    currentUser: state.user.currentUser
+})
 
+const mapDispatchToProps = {
+
+}
+const Header = connect(mapStateToProps, mapDispatchToProps)(_Header)
 export { Header }

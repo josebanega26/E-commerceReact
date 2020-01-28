@@ -20,7 +20,7 @@ const SignUp = (props) => {
             const { user } = await auth.createUserWithEmailAndPassword(email, password)
             console.log(user)
             await createUserProfile(user, { displayName })
-            clearInput()
+            clearInput({ email: '', password: '', confirmPassword: '', displayName: '' })
         }
         catch (err) {
             console.error('create user error', err)

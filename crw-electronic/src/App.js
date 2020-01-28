@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import { HomePage, ShopPage, SignInAndUp, NotFoundPage } from './@pages'
 import { Header, Footer } from './@components'
 import { Router } from "@reach/router"
 import { auth, createUserProfile } from './firebase/firebase.util'
-function App() {
-  const [user, setuser] = useState(null)
-
+import { connect } from 'react-redux'
+import { setCurrentUser } from './@redux/actions/user.actions'
+function App(props) {
+  const { setCurrentUser } = props
 
   useEffect(() => {
     const unsuscribeFromAuto = auth.onAuthStateChanged(async (userAuth) => {
@@ -14,27 +15,24 @@ function App() {
         const UserRef = await createUserProfile(userAuth)
         UserRef.onSnapshot(snapShot => {
           const { id } = snapShot
-          setuser({
-            id, ...snapShot.data()
-          })
+          setCurrentUser({ id, ...snapShot.data() })
         })
       }
       else {
-        setuser(userAuth)
+        setCurrentUser(userAuth)
       }
     })
     // Component will Unmount in Hooks
     return () => {
       unsuscribeFromAuto()
     }
-  }, [])
+  }, [setCurrentUser])
 
 
-  console.log('user', user)
   return (
     <div className='root-App'>
       <div className="App">
-        <Header currentUser={user}></Header>
+        <Header ></Header>
 
         <Router>
           <HomePage path='/'></HomePage>
@@ -47,5 +45,12 @@ function App() {
     </div>
   );
 }
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser
+})
 
-export default App;
+const mapDispatchToProps = dispatch => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
