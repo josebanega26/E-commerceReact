@@ -1,6 +1,7 @@
 import React from 'react'
 import { useInputChange } from '../../@customHooks'
 import { FormInput, CustomButton } from '../index'
+import { signInWithGoogle } from '../../firebase/firebase.util'
 import './style.scss'
 const SignIn = (props) => {
 
@@ -37,7 +38,7 @@ const SignIn = (props) => {
                 <div className="buttons">
                     <CustomButton type='submit' onClick={handleSubmit} >
                         Sign In</CustomButton>
-                    <CustomButton type='submit' className='secondary' onClick={handleSubmit} >
+                    <CustomButton onClick={signInWithGoogle} className='secondary'  >
                         Sign In with Google</CustomButton>
                 </div>
             </form>
