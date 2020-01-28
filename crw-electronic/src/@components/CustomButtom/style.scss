@@ -12,6 +12,9 @@
   border: none;
   cursor: pointer;
 
+  &.disabled{
+    background-color: #535151de;
+  }
  
 }
 

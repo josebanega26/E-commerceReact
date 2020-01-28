@@ -8,7 +8,7 @@ export const useInputChange = () => {
         [e.currentTarget.name]: e.currentTarget.value
     })
     const clearInput = () => {
-        setInput({})
+        setInput(null)
     }
 
     return [input, handleInputChange, clearInput]

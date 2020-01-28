@@ -1,9 +1,11 @@
 import React from 'react'
-import { SignIn } from '../../@components'
+import { SignIn, SignUp } from '../../@components'
+import './style.scss'
 const SignInAndUp = (props) => {
     return (
-        <div>
+        <div className='sign-in-n-up'>
             <SignIn></SignIn>
+            <SignUp></SignUp>
         </div>
     )
 }
