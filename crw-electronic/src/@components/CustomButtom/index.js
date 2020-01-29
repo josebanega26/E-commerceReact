@@ -1,8 +1,13 @@
 import React from 'react'
 import './style.scss'
-const CustomButton = ({ children, className = 'primary', disabled, ...otherProps }) => {
+const CustomButton = ({ inverse, children, className = 'primary', disabled, ...otherProps }) => {
     return (
-        <button className={`custom-button ${className} `} disabled={disabled}{...otherProps}>
+        <button
+            className={`
+        custom-button 
+        ${className} 
+        ${inverse ? 'inverted' : ''}`}
+            disabled={disabled}{...otherProps}>
             {children}
         </button>
     )

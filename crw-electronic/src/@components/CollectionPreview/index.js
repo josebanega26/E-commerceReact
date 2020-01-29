@@ -6,7 +6,7 @@ import '@brainhubeu/react-carousel/lib/style.css';
 
 
 const ColletionPreview = ({ items = [], title }) => {
-    const carrouselItem = items.map(({ id, ...rest }) => (<CollectionItem key={id} {...rest}>
+    const carrouselItem = items.map((item) => (<CollectionItem id={item.id} key={item.id} item={item}>
     </CollectionItem>))
     return (
         <div className="collection-preview">
