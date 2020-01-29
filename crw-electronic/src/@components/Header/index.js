@@ -4,8 +4,11 @@ import './style.scss'
 import { ReactComponent as Logo } from '../../@assets/logo.svg'
 import { auth } from '../../firebase/firebase.util'
 import { connect } from 'react-redux'
+import { CartIcon, CartDropdown } from '../index'
 
-const _Header = ({ currentUser }) => {
+const _Header = (props) => {
+    const { currentUser, dropdownState, } = props
+    console.log('dropdownState', dropdownState)
     const { displayName } = currentUser ? currentUser : { displayName: '' }
     const signOut = () => {
         auth.signOut()
@@ -27,8 +30,11 @@ const _Header = ({ currentUser }) => {
                 {
                     !currentUser
                         ? <Link className='option' to='signIn'> SIGN IN</Link>
-                        : <div className='option' onClick={signOut}> SIGN OUT</div>}
+                        : <div className='option' onClick={signOut}> SIGN OUT</div>
+                }
+                <CartIcon />
             </div>
+            {dropdownState && <CartDropdown ></CartDropdown>}
         </div>
     )
 }
@@ -39,11 +45,11 @@ _Header.defaultProps = {
     }
 }
 const mapStateToProps = (state) => ({
-    currentUser: state.user.currentUser
+    currentUser: state.user.currentUser,
+    dropdownState: state.cart.dropdownState
 })
 
-const mapDispatchToProps = {
-
-}
+const mapDispatchToProps = dispatch => ({
+})
 const Header = connect(mapStateToProps, mapDispatchToProps)(_Header)
 export { Header }
