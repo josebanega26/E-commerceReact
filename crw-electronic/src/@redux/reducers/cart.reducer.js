@@ -1,8 +1,8 @@
-import { CHANGE_DROPDOWN, ADD_ITEM } from '../type'
+import { CHANGE_DROPDOWN, ADD_ITEM, } from '../type'
 import { addItemToCart } from '../utils/cart.util'
 const initialState = {
     dropdownState: false,
-    cartItems: []
+    cartItems: [],
 }
 
 export const cartReducer = (state = initialState, { type, payload }) => {

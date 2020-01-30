@@ -20,12 +20,14 @@ const addItemToCart = (cartItems, itemToAdd) => {
 
 }
 
-const removeItemFromCart = (cartItems, itemToAdd) => {
-    const existItem = cartItems.find(({ id }) => {
-        return id === itemToAdd.id
-    })
-    // REMOVE ITEM 
-    return [...cartItems]
-}
+
+
+// const removeItemFromCart = (cartItems, itemToAdd) => {
+//     const existItem = cartItems.find(({ id }) => {
+//         return id === itemToAdd.id
+//     })
+//     // REMOVE ITEM 
+//     return [...cartItems]
+// }
 
 export { addItemToCart }

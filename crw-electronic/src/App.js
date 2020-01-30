@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import { HomePage, ShopPage, SignInAndUp, NotFoundPage } from './@pages'
+import { HomePage, ShopPage, SignInAndUp, NotFoundPage, Checkout } from './@pages'
 import { Header, Footer } from './@components'
 import { Router } from "@reach/router"
 import { auth, createUserProfile } from './firebase/firebase.util'
@@ -37,7 +37,8 @@ function App(props) {
         <Router>
           <HomePage path='/'></HomePage>
           <ShopPage path='/shop'></ShopPage>
-          <SignInAndUp path='signIn'></SignInAndUp>
+          <SignInAndUp path='/signIn'></SignInAndUp>
+          <Checkout path='/checkout'></Checkout>
           <NotFoundPage default ></NotFoundPage>
         </Router>
       </div>
