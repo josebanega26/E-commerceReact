@@ -2,9 +2,11 @@ import React from 'react'
 import './style.scss'
 import { connect } from 'react-redux'
 import { cartItemSelector, carItemTotalPriceSelector } from '../../@redux/selects/cart.select'
+import { CheckoutItem } from '../../@components'
 const _Checkout = (props) => {
     console.log('props checkout', props)
-    const { totalPrice, cartItems } = props
+    const { totalPrice, cartItems } = props;
+    console.log('cartItems', cartItems)
     return (
         <div className='checkout-page'>
             <div className="checkout-header">
@@ -24,6 +26,9 @@ const _Checkout = (props) => {
                     <span>Delete</span>
                 </div>
             </div>
+            {
+                cartItems.map(item => (<CheckoutItem key={item.id} item={item}></CheckoutItem>))
+            }
             <div className='total'> <span>TOTAL:  {totalPrice} $</span></div>
         </div>
     )

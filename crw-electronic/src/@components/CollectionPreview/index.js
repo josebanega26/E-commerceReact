@@ -16,7 +16,6 @@ const ColletionPreview = ({ items = [], title }) => {
             <Carousel
                 arrows
                 slidesPerPage={4}
-                clickToChange
                 slides={
                     carrouselItem
                 } />
