@@ -1,6 +1,7 @@
 const initialState = {
-    collection: [
-        {
+    collection:
+    {
+        'hats': {
             id: 1,
             title: 'Hats',
             routeName: 'hats',
@@ -61,6 +62,7 @@ const initialState = {
                 }
             ]
         },
+        'sneakers':
         {
             id: 2,
             title: 'Sneakers',
@@ -116,6 +118,7 @@ const initialState = {
                 }
             ]
         },
+        'jackets':
         {
             id: 3,
             title: 'Jackets',
@@ -153,6 +156,7 @@ const initialState = {
                 }
             ]
         },
+        'womes':
         {
             id: 4,
             title: 'Womens',
@@ -202,7 +206,7 @@ const initialState = {
                 }
             ]
         },
-        {
+        'mens': {
             id: 5,
             title: 'Mens',
             routeName: 'mens',
@@ -245,7 +249,8 @@ const initialState = {
                 }
             ]
         }
-    ]
+    }
+
 }
 
 export default (state = initialState, { type, payload }) => {
