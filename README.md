@@ -21,7 +21,7 @@ In this Readme you will find some of the notes that i take it in the React cours
     3. The changed objects, and the changed objects only, get updated on the real DOM.
     4. Changes on the real DOM cause the screen to change.
 
-2.   
+  
 
 ## React Developer has to:
 

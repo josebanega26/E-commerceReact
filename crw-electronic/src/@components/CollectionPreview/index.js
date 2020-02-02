@@ -3,14 +3,16 @@ import './style.scss'
 import { CollectionItem } from '../index'
 import Carousel from '@brainhubeu/react-carousel'
 import '@brainhubeu/react-carousel/lib/style.css';
+import { navigate } from '@reach/router'
 
-
-const ColletionPreview = ({ items = [], title }) => {
+const ColletionPreview = (props) => {
+    const { items = [], title, routeName } = props
+    console.log('props preview', routeName)
     const carrouselItem = items.map((item) => (<CollectionItem id={item.id} key={item.id} item={item}>
     </CollectionItem>))
     return (
         <div className="collection-preview">
-            <h1 className='title'>
+            <h1 className='title' onClick={() => { navigate(`shop/${routeName}`) }}>
                 {title}
             </h1>
             <Carousel

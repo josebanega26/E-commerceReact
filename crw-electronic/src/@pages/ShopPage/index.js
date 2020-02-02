@@ -1,19 +1,24 @@
-import React, { useState, useEffect } from 'react'
-import { SHOP_DATA as mockData } from './mockData'
-import { ColletionPreview } from '../../@components'
+import React from 'react'
+import { CollectionsOverView } from '../../@components'
+import { connect } from 'react-redux'
+import { Router } from "@reach/router";
+import { Collection } from '../index'
+const _ShopPage = () => {
 
-const ShopPage = (props) => {
-    const [shopData, setShopData] = useState([])
-    useEffect(() => {
-        setTimeout(() => {
-            setShopData(mockData)
-        }, 3000)
-    }, [])
     return (
-        <div>
-            {shopData.map((items, id) => (<ColletionPreview key={id} {...items} />))}
+        <div className='shop-page'>
+            <Router>
+                <CollectionsOverView path='/'></CollectionsOverView>
+                <Collection path='/:idCollection'></Collection>
+            </Router>
         </div>
     )
 }
 
+const mapStateToProps = (state) => ({
+
+})
+
+
+const ShopPage = connect(mapStateToProps)(_ShopPage)
 export { ShopPage }
