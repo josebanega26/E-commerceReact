@@ -2,7 +2,7 @@ import React from 'react'
 import './style.scss'
 import { connect } from 'react-redux'
 import { cartItemSelector, carItemTotalPriceSelector } from '../../@redux/selects/cart.select'
-import { CheckoutItem } from '../../@components'
+import { CheckoutItem, StripeButton } from '../../@components'
 const _Checkout = (props) => {
     console.log('props checkout', props)
     const { totalPrice, cartItems } = props;
@@ -30,6 +30,7 @@ const _Checkout = (props) => {
                 cartItems.map(item => (<CheckoutItem key={item.id} item={item}></CheckoutItem>))
             }
             <div className='total'> <span>TOTAL:  {totalPrice} $</span></div>
+            <StripeButton price={totalPrice}></StripeButton>
         </div>
     )
 }
