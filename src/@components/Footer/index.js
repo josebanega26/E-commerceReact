@@ -3,7 +3,7 @@ import './style.scss'
 const Footer = () => {
     return (
         <div className='footer'>
-            © 2020, Built with React
+            © 2020, Built by Jose Banega
         </div>
     )
 }
