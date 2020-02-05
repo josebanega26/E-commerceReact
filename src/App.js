@@ -6,7 +6,7 @@ import { Router } from "@reach/router"
 import { auth, createUserProfile } from './firebase/firebase.util'
 import { connect } from 'react-redux'
 import { setCurrentUser } from './@redux/actions/user.actions'
-import { Layout } from './app.styled'
+import { Layout } from './styles.js'
 function App(props) {
   const { setCurrentUser } = props
 
