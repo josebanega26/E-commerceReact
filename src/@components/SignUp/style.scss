@@ -1,3 +1,7 @@
 .sign-up{
     width: 40vw;
+    @media (max-width:426px) {
+        width: 100%;
+        text-align: center;
+    }
 }

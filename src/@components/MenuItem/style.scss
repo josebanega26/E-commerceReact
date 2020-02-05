@@ -26,6 +26,9 @@
 
   &.large{
     height: 380px;
+    @media (max-width: 426px) {
+      height:240px ;
+    }
   }
   &:first-child {
     margin-right: 7.5px;

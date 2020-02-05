@@ -6,6 +6,7 @@ import { Router } from "@reach/router"
 import { auth, createUserProfile } from './firebase/firebase.util'
 import { connect } from 'react-redux'
 import { setCurrentUser } from './@redux/actions/user.actions'
+import { Layout } from './app.styled'
 function App(props) {
   const { setCurrentUser } = props
 
@@ -31,7 +32,7 @@ function App(props) {
 
   return (
     <div className='root-App'>
-      <div className="App">
+      <Layout >
         <Header ></Header>
 
         <Router>
@@ -43,7 +44,7 @@ function App(props) {
           <Checkout path='checkout'></Checkout>
           <NotFoundPage default ></NotFoundPage>
         </Router>
-      </div>
+      </Layout>
       <Footer></Footer>
     </div>
   );

@@ -1,5 +1,9 @@
 .sign-in{
     width: 35vw;
+    @media (max-width:426px) {
+        width: 100%;
+        text-align: center;
+    }
     .buttons{
         display: flex;
         justify-content: space-between;

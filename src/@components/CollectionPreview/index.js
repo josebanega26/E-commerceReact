@@ -4,6 +4,7 @@ import { CollectionItem } from '../index'
 import Carousel from '@brainhubeu/react-carousel'
 import '@brainhubeu/react-carousel/lib/style.css';
 import { navigate } from '@reach/router'
+import { breakpoints } from './utils.js'
 
 const ColletionPreview = (props) => {
     const { items = [], title, routeName } = props
@@ -18,6 +19,7 @@ const ColletionPreview = (props) => {
             <Carousel
                 arrows
                 slidesPerPage={4}
+                breakpoints={breakpoints}
                 slides={
                     carrouselItem
                 } />
