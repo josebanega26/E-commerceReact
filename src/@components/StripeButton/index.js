@@ -5,13 +5,12 @@ const StripeButton = ({ price }) => {
     const priceForStripe = price * 100;
     const publicKey = 'pk_test_i8aETzzPuCfUnZFg3BaVZ2y800wv4s3UW1'
     const onToken = token => {
-        console.log('token', token);
         alert('Payment successfull')
     }
     return (
 
         <StripeCheckout
-            label='Paw now'
+            label='Pay now'
             name='CRW electronic'
             billingAddress
             shippingAddress

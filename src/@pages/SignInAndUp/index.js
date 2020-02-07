@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 import './style.scss'
 const _SignInAndUp = (props) => {
     const { currentUser } = props
-    console.log('SIGN IN N UP', props)
     return (
         <div className='sign-in-n-up'>
             {

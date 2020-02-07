@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 import { setCurrentUser } from './@redux/actions/user.actions'
 import { Layout } from './styles.js'
 function App(props) {
-  const { setCurrentUser } = props
+  const { setCurrentUser, } = props
 
   useEffect(() => {
     const unsuscribeFromAuto = auth.onAuthStateChanged(async (userAuth) => {
@@ -50,7 +50,7 @@ function App(props) {
   );
 }
 const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser
+  currentUser: state.user.currentUser,
 })
 
 const mapDispatchToProps = dispatch => ({

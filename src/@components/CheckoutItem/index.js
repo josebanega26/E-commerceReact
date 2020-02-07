@@ -44,7 +44,6 @@ const _CheckoutItem = ({ item, addItem, deleteItem, removeAItem }) => {
                 role="img"
                 aria-labelledby="delete"
                 onClick={() => {
-                    console.log("hey");
                     deleteItem(item);
                 }}
             >

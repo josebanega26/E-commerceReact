@@ -58,6 +58,9 @@ for example:
 
         return [input, handleInputChange]
     }`
+
+## ...I will comaback and finish my notes later  
+### SECTIONS  16
 #### Link of reference 
 [1] https://www.codecademy.com/articles/react-virtual-dom
 [2] https://dev.to/stanleyjovel/simplify-controlled-components-with-react-hooks-23nn

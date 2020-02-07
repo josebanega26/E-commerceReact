@@ -5,7 +5,7 @@ const shopSelector = state => state.shop
 export const shopCollectionSelector = createSelector(
     [shopSelector],
     ({ collection }) => {
-        return Object.keys(collection).map(item => collection[item])
+        return collection ? Object.keys(collection).map(item => collection[item]) : []
     }
 )
 
@@ -14,7 +14,7 @@ export const selectCollections = collectionUrlParam => {
         createSelector(
             [shopSelector],
             ({ collection }) => {
-                return collection[collectionUrlParam]
+                return collection ? collection[collectionUrlParam] : null
             })
     )
 }

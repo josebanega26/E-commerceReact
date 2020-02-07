@@ -4,9 +4,7 @@ import { connect } from 'react-redux'
 import { cartItemSelector, carItemTotalPriceSelector } from '../../@redux/selects/cart.select'
 import { CheckoutItem, StripeButton } from '../../@components'
 const _Checkout = (props) => {
-    console.log('props checkout', props)
     const { totalPrice, cartItems } = props;
-    console.log('cartItems', cartItems)
     return (
         <div className='checkout-page'>
             <div className="checkout-header">

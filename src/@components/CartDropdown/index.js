@@ -7,7 +7,6 @@ import { navigate } from "@reach/router"
 import { changeDropdown } from '../../@redux/actions/cart.actions'
 const _CartDropdown = (props) => {
     const { cartItems, dispatch } = props
-    console.log('cartItems', props)
     return (
         <div className='cart-dropdown'>
             <div className='cart-items'>

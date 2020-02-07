@@ -11,7 +11,6 @@ const SignIn = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const { email, password } = input
-        console.log('email', email)
         try {
             await auth.signInWithEmailAndPassword(email, password)
             clearInput({ email: '', password: '' })

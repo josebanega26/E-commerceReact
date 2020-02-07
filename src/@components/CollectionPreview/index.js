@@ -8,7 +8,6 @@ import { breakpoints } from './utils.js'
 
 const ColletionPreview = (props) => {
     const { items = [], title, routeName } = props
-    console.log('props preview', routeName)
     const carrouselItem = items.map((item) => (<CollectionItem id={item.id} key={item.id} item={item}>
     </CollectionItem>))
     return (

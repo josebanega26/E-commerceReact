@@ -3,7 +3,6 @@ import './style.scss'
 import { Link } from "@reach/router"
 
 const MenuItem = ({ title, id, imgUrl, size, linkUrl }) => {
-    console.log('size', size)
     return (
         <div key={id} className={`${size} menu-item`}>
             <Link

@@ -9,7 +9,6 @@ import { currentUserSelect } from '../../@redux/selects/user.select'
 
 const _Header = (props) => {
     const { currentUser, dropdownState, } = props
-    console.log('props', props)
     const { displayName } = currentUser ? currentUser : { displayName: '' }
     const signOut = () => {
         auth.signOut()
