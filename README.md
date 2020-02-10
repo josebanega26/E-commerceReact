@@ -59,6 +59,11 @@ for example:
         return [input, handleInputChange]
     }`
 
+
+    Thunks
+
+    it;s a function that returns a fuction that gets dispatch in it.
+
 ## ...I will comaback and finish my notes later  
 ### SECTIONS  16
 #### Link of reference 

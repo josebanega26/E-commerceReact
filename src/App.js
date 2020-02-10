@@ -13,6 +13,7 @@ function App(props) {
   useEffect(() => {
     const unsuscribeFromAuto = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
+
         const UserRef = await createUserProfile(userAuth)
         UserRef.onSnapshot(snapShot => {
           const { id } = snapShot
