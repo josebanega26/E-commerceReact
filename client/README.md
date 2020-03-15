@@ -1,5 +1,7 @@
 # E-commerceReact
 
+deploy in - > https://crwn-electronic.herokuapp.com/
+
 E-commerce with React from the Complete React Developer in 2020  
 
 # **Notes**
