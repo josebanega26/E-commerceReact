@@ -66,7 +66,7 @@ for example:
 
     it;s a function that returns a fuction that gets dispatch in it.
 
-## ...I will comaback and finish my notes later  
+## ...I will comeback and finish my notes later  
 ### SECTIONS  16
 #### Link of reference 
 [1] https://www.codecademy.com/articles/react-virtual-dom
