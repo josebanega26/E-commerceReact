@@ -42,3 +42,4 @@ const mapDispatchToProps = {
 }
 const Checkout = connect(mapStateToProps, mapDispatchToProps)(_Checkout)
 export { Checkout }
+export default Checkout

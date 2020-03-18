@@ -13,3 +13,4 @@ const NotFoundPage = () => {
 }
 
 export { NotFoundPage }
+export default NotFoundPage

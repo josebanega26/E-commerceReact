@@ -27,3 +27,4 @@ const mapStateToProps = (state, ownProps) => ({
 
 const Collection = connect(mapStateToProps)(CollectionPagesWithSpinner)
 export { Collection }
+export default Collection

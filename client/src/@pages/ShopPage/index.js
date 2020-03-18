@@ -39,3 +39,4 @@ const mapDispatchToProps = dispatch => ({
 
 const ShopPage = connect(mapStateToProps, mapDispatchToProps)(_ShopPage)
 export { ShopPage }
+export default ShopPage

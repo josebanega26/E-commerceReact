@@ -20,3 +20,4 @@ const mapStateToProps = (state) => ({
 })
 const SignInAndUp = connect(mapStateToProps)(_SignInAndUp)
 export { SignInAndUp }
+export default SignInAndUp
